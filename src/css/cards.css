@@ -1,0 +1,83 @@
+/*-------------------/*
+
+ -> Body // content // cards <-
+
+/*--------------------*/
+
+.conteiner.cards{
+  flex: 0 0 auto;
+}
+
+.container.card {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  height: 110px;
+  margin: 0px 10px 0px 10px;
+  padding: 0 20px 0 20px;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.item {
+  margin: 5px 0 5px 0;
+}
+
+.item.numbers {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.item.texto {
+  font-weight: 200;
+}
+
+.card.icon {
+  display: flex;
+  height: 100%;
+  flex: 1 0 auto;
+}
+
+.icon.circle {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  width: 75px;
+}
+
+.icon.circle>i {
+  font-size: 1.5rem;
+}
+
+.icon.circle.one {
+  border: 1px solid rgb(24, 178, 205);
+  background: rgba(24, 178, 205, 0.3);
+  color: rgb(24, 178, 205);
+}
+
+.icon.circle.two {
+  border: 1px solid rgb(223, 7, 79);
+  background: rgba(223, 7, 79, 0.3);
+  color: rgb(223, 7, 79);
+}
+
+.icon.circle.three {
+  border: 1px solid rgb(91, 74, 179);
+  background: rgba(91, 74, 179, 0.3);
+  color: rgb(91, 74, 179);
+}
+
+.icon.circle.four {
+  border: 1px solid rgb(100, 186, 69);
+  background: rgba(100, 186, 69, 0.3);
+  color: rgb(100, 186, 69);
+}
