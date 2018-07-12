@@ -39,7 +39,11 @@ body {
 /*--------------------*/
 
 .container.cards {
-  margin: 10px 0px 10px 0px;
+
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 0px 10px 0px;
 }
 
 .content.cards {
@@ -55,9 +59,4 @@ body {
 
 .content>p {
   margin: 0 0 15px 20px;
-}
-
-.cards {
-  display: flex;
-  justify-content: space-around;
 }

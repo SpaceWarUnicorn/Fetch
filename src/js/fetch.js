@@ -1,12 +1,13 @@
 (() => {
   'use strict';
 
-  var cont = document.querySelector('#container');
+  var cont = document.querySelector('.container.cards');
 
   let newCards,
 
     url = ['https://pokeapi.co/api/v2/pokemon/1', 'https://pokeapi.co/api/v2/pokemon/2', 'https://pokeapi.co/api/v2/pokemon/3', 'https://pokeapi.co/api/v2/pokemon/4'];
-  (() => {
+
+  
     for (var i in url) {
       fetch(url[i])
         .then(handleErrors)
@@ -15,11 +16,8 @@
         .catch(Error);
     }
 
-    console.log(newCards);
 
-
-
-  })();
+    setTimeout(() => cont.style.display = 'flex', 2000);
 
   function handleErrors(res) {
     if (!res.ok) {
@@ -53,6 +51,7 @@
       </section>`;
 
       cont.innerHTML += newCards;
+
   }
 
   function Error(err) {
