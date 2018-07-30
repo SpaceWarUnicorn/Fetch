@@ -7,17 +7,30 @@
 
     url = ['https://pokeapi.co/api/v2/pokemon/1', 'https://pokeapi.co/api/v2/pokemon/2', 'https://pokeapi.co/api/v2/pokemon/3', 'https://pokeapi.co/api/v2/pokemon/4'];
 
-  
-    for (var i in url) {
-      fetch(url[i])
-        .then(handleErrors)
-        .then(parseJSON)
-        .then(updatePokemon)
-        .catch(Error);
-    }
+  function tarea() {
 
+    //espera 2 argumentos, resolve, reject
+    let promesa = new Promise((resolve, reject) => {
+      for (var i in url) {
+        fetch(url[i])
+          .then(handleErrors)
+          .then(parseJSON)
+          .then(updatePokemon)
+          .catch(Error);
+      }
 
-    setTimeout(() => cont.style.display = 'flex', 2000);
+      console.log(cont.outerHTML);
+      console.log(cont.style.display);
+      resolve();
+
+    });
+    return promesa;
+  }
+
+  tarea()
+    .then(() => {
+      cont.style.display = 'flex';
+    });
 
   function handleErrors(res) {
     if (!res.ok) {
@@ -50,7 +63,7 @@
         </article>
       </section>`;
 
-      cont.innerHTML += newCards;
+    cont.innerHTML += newCards;
 
   }
 
